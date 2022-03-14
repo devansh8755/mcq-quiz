@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="dvansh.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <form name="quiz" id="quiz">
+        <div>
+        <p>1. which is the trending language?</p>
+        <P><input type="radio" name="ques1" value="javscript">a.javscript</P>
+        <P><input type="radio" name="ques1" value="html">b.cpp</P>
+        <p><input type="radio" name="ques1" value="java">c.java</p>
+        </div>
+        <div>
+            <p>2. product based company preffered?</p>
+            <P><input type="radio" name="ques2" value="javascript">a.javascript</P>
+            <P><input type="radio" name="ques2" value="html">b.html</P>
+            <p><input type="radio" name="ques2" value="dsa">c.dsa</p>
+        </div>
+        <div>
+            <p>3. what is average pakage in javscript?</p>
+            <P><input type="radio" name="ques3" value="12lpa">a.12lpa</P>
+            <P><input type="radio" name="ques3" value="2lpa">b.2lpa</P>
+            <p><input type="radio" name="ques3" value="depends on you">c.depend on your experience</p>
+        </div>
+        <div>
+                <p>4. what is the average age of engineer</p>
+                <P><input type="radio" name="ques4" value="40-50">a.40-50</P>
+                <P><input type="radio" name="ques4" value="50--56">b.50-56</P>
+                <p><input type="radio" name="ques4" value="lifestyle">c.depen on your lifestyle style</p>
+        </div>
+        <div>
+                    <p>5. best location for engineer </p>
+                    <P><input type="radio" name="ques5" value="ncr">a.ncr</P>
+                    <P><input type="radio" name="ques5" value="bang">b.bang</P>
+                    <p><input type="radio" name="ques5" value="dehradun">c.dehradun</p>
+        </div>
+                <input type="button" name="" value="submitted" id="button" onclick="che()">
+    </form> 
+    <p id="res">show the result</p>
+    
+</body>
+<script>
+    function che(){
+        var r=0;
+        var q1=document.quiz.ques1.value;
+        var q2=document.quiz.ques2.value;
+        var q3=document.quiz.ques3.value;
+        var q4=document.quiz.ques4.value;
+        var q5=document.quiz.ques5.value;
+        var res=document.getElementById('res');
+        var quiz=document.getElementById("quiz")
+        if(q1=="javscript"){r++}
+        if(q2=="dsa"){r++}
+        if(q3=="depends on you"){r++}
+        if(q4=="lifestyle"){r++}
+        if(q5=="ncr"){r++}
+        res.textContent=`${r}`
+        quiz.style.display="none"
+
+        if(r<=3){
+            res.textContent=`your res is ${r}. keep it up`
+        }
+        else{
+            res.textContent=`${r} is good one`
+        }
+ 
+    }
+</script>
+</html>
